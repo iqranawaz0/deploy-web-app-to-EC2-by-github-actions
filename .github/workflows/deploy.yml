@@ -49,7 +49,7 @@ jobs:
     environment: Dev
     permissions:
       id-token: write
-      contents: read
+      contents: write
     steps:
     - uses: actions/checkout@v2
     - uses: aws-actions/configure-aws-credentials@v1
