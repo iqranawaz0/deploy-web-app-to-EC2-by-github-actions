@@ -15,9 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
-      contents: write
+      contents: read
+      
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
         name: Checkout Repository
 
       - uses: aws-actions/configure-aws-credentials@master
@@ -49,11 +50,11 @@ jobs:
     environment: Dev
     permissions:
       id-token: write
-      contents: write
-      
+      contents: read
+
     steps:
     - uses: actions/checkout@v2
-    - uses: aws-actions/configure-aws-credentials@v1
+    - uses: aws-actions/configure-aws-credentials@master
       with:
         role-to-assume: ${{ secrets.IAMROLE_GITHUB }}
         role-session-name: GitHub-Action-Role
