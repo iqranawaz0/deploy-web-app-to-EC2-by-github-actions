@@ -49,7 +49,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment: process.env.AWS_SDK_JS_SUPPRESS_MAINTENANCE_MODE_MESSAGE = '1';
+    environment: Dev
     permissions:
       id-token: write
       contents: read
