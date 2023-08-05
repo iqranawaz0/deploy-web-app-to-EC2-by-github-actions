@@ -7,7 +7,7 @@ const createDeployment = async (commitHash) => {
 
   const params = {
     applicationName: 'CodeDeployAppNameWithASG',
-    deploymentGroupName: 'codeDeployment',
+    deploymentGroupName: 'CodeDeployGroupName',
     revision: {
       revisionType: 'GitHub',
       gitHubLocation: {
